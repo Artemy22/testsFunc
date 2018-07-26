@@ -1,0 +1,6 @@
+/vendor/
+config.php
+/.idea
+/MainLogic.php
+conf.7z
+forRefactor.7z

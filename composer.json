@@ -1,0 +1,15 @@
+{
+    "name": "artem/autotests",
+    "description": "my autotests",
+    "type": "behat/behat",
+    "require": {
+        "behat/behat": "^3.4",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "authors": [
+        {
+            "name": "artem",
+            "email": "artem.nii@me.com"
+        }
+    ]
+}
