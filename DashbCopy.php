@@ -1,43 +1,42 @@
 <?php
 
-class DashbAdd
+require_once ('DashbAdd.php');
+
+class DashbCopy
 {
-    public $title;
     public $path;
     public $cookie;
 
     /**
      * MainLogicFile constructor.
-     * @param $title
      * @param $path
      * @param $cookie
      */
-    public function __construct($title, $path, $cookie)
+    public function __construct($path, $cookie)
     {
-        $this->title = $title;
         $this->path = $path;
         $this->cookie = $cookie;
     }
 
-    public function dashbAdd()
+
+    public function dashbCopy($id)
+
     {
         $client = new \GuzzleHttp\Client(['base_uri' => $this->path]);
         try {
             $response = $client->request('POST', '', [
                 'multipart' => [
                     [
-                        'name' => 'title',
-                        'contents' => $this->title
+                        'name' => 'uuid',
+                        'contents' => $id
                     ]
                 ],
                 'headers' => [
                     'Cookie' => $this->cookie
                 ]
             ]);
-            $json = json_decode($response->getBody());
-            //echo $json['id']; // array
-            //echo "Code: " . $response->getStatusCode() . '. Type: DATA ' . $response->getBody() . '<br>';
-            return $json->id; // object
+
+            echo "Code: " . $response->getStatusCode() . '. Type: DATA ' . $response->getBody() . '<br>';
         } catch (\GuzzleHttp\Exception\GuzzleException $exception) {
             echo $exception->getMessage() . "<br>";
         }
