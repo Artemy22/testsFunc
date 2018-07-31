@@ -8,6 +8,6 @@ require "/home/artem/PhpstormProjects/autotests/vendor/autoload.php";
 $uniq_title_Data = "autotest_Dash_title_" .uniqid();
 
 
-$newDashbAdd = new DashbAdd($uniq_title_Data, $localDashb, $localCookie);
+$newDashbAdd = new DashbAdd($uniq_title_Data, "http://local.".$newDashb, $localCookie);
 
 $newDashbAdd->dashbAdd();

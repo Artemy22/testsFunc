@@ -3,5 +3,5 @@
 require ('../config.php');
 require('../MainLogicList.php');
 
-$classifList = new MainLogicList($masterPath."classify/classifier/list", $masterJwt);
+$classifList = new MainLogicList("https://master.".$mainPath."classify/classifier/list", $masterJwt);
 $classifList->getList();

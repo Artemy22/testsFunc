@@ -3,5 +3,5 @@
 require ('../config.php');
 require('../MainLogicList.php');
 
-$segmList = new MainLogicList($trainingPath."store/segmentator/", $trainingJwt);
+$segmList = new MainLogicList("https://training.".$mainPath."store/segmentator/", $trainingJwt);
 $segmList->getList();

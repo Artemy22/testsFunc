@@ -3,5 +3,5 @@
 require ('../config.php');
 require('../MainLogicList.php');
 
-$segmList = new MainLogicList($customPath."store/segmentator/", $customJwt);
+$segmList = new MainLogicList("https://customdemohub."."https://customdemohub.".$mainPath."store/segmentator/", $customJwt);
 $segmList->getList();

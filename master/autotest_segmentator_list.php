@@ -3,5 +3,5 @@
 require ('../config.php');
 require('../MainLogicList.php');
 
-$segmList = new MainLogicList($masterPath."store/segmentator/", $masterJwt);
+$segmList = new MainLogicList("https://master.".$mainPath."store/segmentator/", $masterJwt);
 $segmList->getList();

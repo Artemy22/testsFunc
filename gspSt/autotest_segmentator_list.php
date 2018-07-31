@@ -3,5 +3,5 @@
 require ('../config.php');
 require('../MainLogicList.php');
 
-$segmList = new MainLogicList($gspStPath."store/segmentator/", $gspStJwt);
+$segmList = new MainLogicList("https://gcp-st-activate.".$mainPath."store/segmentator/", $gspStJwt);
 $segmList->getList();
