@@ -11,7 +11,7 @@ class ClassifAddNewLocal
      * @param $path
      * @param $cookie
      */
-    public function __construct($title, $path, $cookie, $token)
+    public function __construct($title, $path, $cookie)
     {
         $this->title = $title;
         $this->path = $path;

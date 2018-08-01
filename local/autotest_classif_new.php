@@ -9,7 +9,7 @@ $uniq_title_Data = "autotest_classif_" . uniqid();
 
 $token = '';
 
-$uploadData = new ClassifAddNewLocal ($uniq_title_Data, $localClassNew, $localCookie, $token);
+$uploadData = new ClassifAddNewLocal ($uniq_title_Data, "http://local.".$newClassifier, $localCookie);
 
 $uploadData->actionData();
 echo "\n";
