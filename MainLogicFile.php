@@ -42,7 +42,7 @@ class MainLogicFile
                 ]
             ]);
 
-            echo "Code: " . $response->getStatusCode() . '. Type: FILE ' . $response->getBody() . '<br>';
+            echo "Code: " . $response->getStatusCode() . '. Type: FILE ' . $response->getBody() ."\n".'<br>';
         } catch (\GuzzleHttp\Exception\GuzzleException $exception) {
             echo $exception->getMessage() . "\n";
         }

@@ -3,18 +3,18 @@
 class MainLogicList
 {
     public $path;
-    public $jwt;
+    public $cookie;
 
     /**
      * MainLogicFile constructor.
      * @param $path
-     * @param $jwt
+     * @param $cookie
      */
-    public function __construct($path, $jwt)
+    public function __construct($path, $cookie)
     {
 
         $this->path = $path;
-        $this->jwt = $jwt;
+        $this->cookie = $cookie;
 
     }
 
@@ -24,7 +24,7 @@ class MainLogicList
         try {
             $response = $client->request('GET', '', [
                 'headers' => [
-                    'Authorization' => $this->jwt
+                    'Cookie' => $this->cookie
                 ]
             ]);
 

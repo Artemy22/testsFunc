@@ -3,5 +3,5 @@
 require ('../config.php');
 require('../MainLogicList.php');
 
-$segmList = new MainLogicList($localPath."store/segmentator/", $localJwt);
+$segmList = new MainLogicList('local.'.$mainPath."store/segmentator/", $localCookie);
 $segmList->getList();

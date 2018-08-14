@@ -4,21 +4,21 @@ class MainLogicData
 {
     public $title;
     public $path;
-    public $jwt;
+    public $cookie;
     public $data;
 
     /**
      * MainLogicFile constructor.
      * @param $title
      * @param $path
-     * @param $jwt
+     * @param $cookie
      * @param $data
      */
-    public function __construct($title, $path, $jwt, $data)
+    public function __construct($title, $path, $cookie, $data)
     {
         $this->title = $title;
         $this->path = $path;
-        $this->jwt = $jwt;
+        $this->cookie = $cookie;
         $this->data = $data;
     }
 
@@ -38,7 +38,7 @@ class MainLogicData
                     ]
                 ],
                 'headers' => [
-                    'Authorization' => $this->jwt
+                    'Cookie' => $this->cookie
                 ]
             ]);
 

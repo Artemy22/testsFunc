@@ -10,11 +10,11 @@ require('../MainLogicData.php');
 $uniq_title_Data = "autotest_Data_" . uniqid();
 
 
-$uploadData = new MainLogicData($uniq_title_Data, $localPath."store/upload/data/upload", $localJwt, $data);
+$uploadData = new MainLogicData($uniq_title_Data, 'local.'.$mainPath."store/upload/data/upload", $localCookie, $data);
 
 $uploadData->actionData();
 
-$appendData = new MainLogicData($uniq_title_Data, $localPath."store/upload/data/upload_afterloading", $localJwt, $data);
+$appendData = new MainLogicData($uniq_title_Data, 'local.'.$mainPath."store/upload/data/upload_afterloading", $localCookie, $data);
 
 
 for ($appendCount = 0; $appendCount < 10; $appendCount++) {
