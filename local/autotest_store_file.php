@@ -11,6 +11,6 @@ $uploadFile->actionFile();
 
 $appendFile = new MainLogicFile($uniq_title_file, "local.".$mainPath."store/upload/file/upload_afterloading", $localJwt, $file);
 
-for ($appendCount = 0; $appendCount < 10; $appendCount++) {
+for ($appendCount = 0; $appendCount < 509; $appendCount++) {
     $appendFile->actionFile();
 }

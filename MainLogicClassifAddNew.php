@@ -4,20 +4,20 @@ class MainLogicClassifAddNew
 {
     public $title;
     public $path;
-    public $cookie;
+    public $jwt;
     public $token;
     /**
      * ClassifAddNewLocal constructor.
      * @param $title
      * @param $path
-     * @param $cookie
+     * @param $jwt
      * @param $token
      */
-    public function __construct($title, $path, $cookie, $token)
+    public function __construct($title, $path, $jwt, $token)
     {
         $this->title = $title;
         $this->path = $path;
-        $this->cookie = $cookie;
+        $this->jwt = $jwt;
         $this->token = $token;
     }
 
@@ -49,7 +49,7 @@ class MainLogicClassifAddNew
                     ]
                 ],
                 'headers' => [
-                    'Cookie' => $this->cookie
+                    'Authorization' => $this->jwt
                 ]
             ]);
 
